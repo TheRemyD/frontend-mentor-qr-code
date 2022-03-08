@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    
+    --dark-blue-values: 218, 44%, 22%;
+    --dark-blue: hsl(var(--dark-blue-values));
+    --dark-blue-alpha: hsla(var(--dark-blue-values), 0.25);
+
+    --ff: "Outfit", "Helvetica Neue", Helvetica, Arial;
+    --base-fs: 15px;
+
+    --pad: 1rem;
+    --radius: 1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--base-fs);
+}
+
+body {
+    background: var(--light-gray);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff);
+}
+
+.card {
+    width: 300px;
+    background: var(--white);
+    padding: var(--pad);
+    border-radius: var(--radius);
+    box-shadow: 0 25px 20px var(--dark-blue-alpha);
+    margin-bottom: calc(2 * var(--pad));
+}
+
+.qr-code {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.card__bottom {
+    padding: var(--pad);
+    text-align: center;
+}
+
+.card__bottom--title {
+    margin-block: var(--pad);
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.card__bottom--description {
+    color: var(--grayish-blue);
+    font-weight: 400;
+}
